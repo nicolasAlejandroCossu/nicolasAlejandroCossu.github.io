@@ -1,0 +1,55 @@
+# Nicolas Cossu
+
+> Nicolas Cossu is a Data Engineer (at Luno) and Forward Deployed Engineer based in Buenos Aires, Argentina. He builds, owns and ships production data systems end to end — ETL pipelines, cloud architecture and the product on top — and leads delivery as a team leader and project manager. Background in data science and data analytics.
+
+Canonical site: https://nicolasalejandrocossu.github.io
+
+## Roles (in priority order)
+
+1. Data Engineer
+2. Forward Deployed Engineer
+3. Team Leader
+4. Project Manager
+5. Data Scientist
+6. Data Analyst
+
+## Profile
+
+- Name: Nicolas Cossu (Nicolas Alejandro Cossu)
+- Location: Buenos Aires, Argentina
+- Current role: Semi-Senior Data Engineer at Luno (since April 2025)
+- Founder & engineer at Exos, a software studio for Argentine SMBs
+- Languages: Spanish (native), English (EF SET certified)
+- Open to: Forward Deployed Engineer, Data Engineer, Project Manager and Team Lead roles
+
+## Core expertise
+
+- Data engineering: ETL/ELT pipelines, data warehousing, high-volume and high-concurrency systems
+- Stack: Python, SQL, Snowflake, Apache Airflow, FastAPI, PostgreSQL, Redis
+- Cloud: AWS, Google Cloud Platform, Microsoft Azure; CI/CD, REST APIs, multi-tenant architecture
+- Adjacent: data science, data analytics, Pandas, NumPy, Tableau, AI agents and AI workflows, IoT
+- Leadership: technical leadership, project management, end-to-end software delivery
+
+## Proof points
+
+- Migrated 70,000+ users from a legacy system to a modern one in production with zero disruption (single 10+ hour run)
+- Engineered platforms built to hold 100,000+ active users
+- Wrote and won a technical proposal for a key client, then designed its cloud infrastructure from scratch
+- Owned CongressIA, a national-scale medical-congress platform, end to end (leadership, architecture, backend, infrastructure)
+- Co-founded Exos and ships validated multi-tenant systems and bespoke platforms
+
+## Education & credentials
+
+- Harvard CS50: Introduction to Programming with Python; Introduction to Databases with SQL
+- IBM Data Science track: Introduction to Data Science, Data Science Methodology, Data Science Tools
+- Electronics Technician Degree, San Vicente Technical School (top student / flag-bearer, 9.45 GPA)
+- EF SET English Certificate
+- Siemens LOGO! national contest recognition; Pedro B. Palacios National Award
+
+## Links
+
+- Portfolio: https://nicolasalejandrocossu.github.io
+- Full story: https://nicolasalejandrocossu.github.io/story/
+- LinkedIn: https://www.linkedin.com/in/nicolas-cossu
+- GitHub: https://github.com/nicolasAlejandroCossu
+- Email: nicolas.cossu2006@gmail.com
