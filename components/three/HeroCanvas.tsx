@@ -98,7 +98,10 @@ export default function HeroCanvas() {
     } catch {
       return; // no WebGL — static wash remains
     }
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.6));
+    // A full-screen fractal-noise shader is fill-rate bound, so device pixel
+    // ratio is the single biggest cost lever. 1.25 stays crisp on retina while
+    // roughly halving the shaded pixels vs a 1.6 cap.
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.25));
     const canvas = renderer.domElement;
     canvas.style.width = "100%";
     canvas.style.height = "100%";
@@ -139,26 +142,58 @@ export default function HeroCanvas() {
 
     const clock = new THREE.Clock();
     let raf = 0;
-    let running = true;
-    const loop = () => {
-      if (!running) return;
+    let last = -1;
+    const FRAME_MS = 1000 / 30; // ambient wash — 30fps is plenty, halves shader work
+
+    // Two independent gates: the loop only runs when the tab is visible AND the
+    // hero is actually on screen. Scroll past it and the expensive shader stops.
+    let tabVisible = !document.hidden;
+    let onScreen = true;
+    const shouldRun = () => tabVisible && onScreen;
+
+    const frame = (now: number) => {
+      if (!shouldRun()) {
+        raf = 0;
+        return;
+      }
+      raf = requestAnimationFrame(frame);
+      if (last >= 0 && now - last < FRAME_MS) return; // throttle to ~30fps
+      last = now;
       uniforms.u_time.value = clock.getElapsedTime();
-      uniforms.u_mouse.value.x += (targetX - uniforms.u_mouse.value.x) * 0.04;
-      uniforms.u_mouse.value.y += (targetY - uniforms.u_mouse.value.y) * 0.04;
+      uniforms.u_mouse.value.x += (targetX - uniforms.u_mouse.value.x) * 0.08;
+      uniforms.u_mouse.value.y += (targetY - uniforms.u_mouse.value.y) * 0.08;
       renderer.render(scene, camera);
-      raf = requestAnimationFrame(loop);
     };
-    loop();
+
+    const start = () => {
+      if (raf || !shouldRun()) return; // guard against stacking loops
+      last = -1;
+      raf = requestAnimationFrame(frame);
+    };
+    const stop = () => {
+      if (raf) cancelAnimationFrame(raf);
+      raf = 0;
+    };
+    start();
 
     const onVisibility = () => {
-      running = !document.hidden;
-      if (running) loop();
+      tabVisible = !document.hidden;
+      tabVisible ? start() : stop();
     };
     document.addEventListener("visibilitychange", onVisibility);
 
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        onScreen = entry.isIntersecting;
+        onScreen ? start() : stop();
+      },
+      { threshold: 0 },
+    );
+    io.observe(el);
+
     return () => {
-      running = false;
-      cancelAnimationFrame(raf);
+      stop();
+      io.disconnect();
       window.removeEventListener("resize", resize);
       window.removeEventListener("pointermove", onMove);
       document.removeEventListener("visibilitychange", onVisibility);

@@ -11,6 +11,11 @@ import { ACCENT_HEX } from "@/lib/accents";
 import type { Project } from "@/content/types";
 
 function CardFace({ p }: { p: Project }) {
+  // Light images need a dark-text pill; dark images (or no image) a light one.
+  const lightBg = p.imageTone === "light";
+  const pillClass = lightBg
+    ? "border-noir/15 bg-cotton/55 text-noir"
+    : "border-cotton/30 bg-cotton/10 text-cotton/90";
   return (
     <div
       className="relative h-full w-full overflow-hidden rounded-lg border border-noir/15 shadow-2xl"
@@ -33,7 +38,17 @@ function CardFace({ p }: { p: Project }) {
             : "linear-gradient(135deg, rgba(255,255,255,0.06), transparent 55%)",
         }}
       >
-        <span className="label text-cotton/70">{p.category}</span>
+        {/* Liquid-glass pill so the category reads clearly over any image;
+            text + tint flip with the image's tone for contrast. */}
+        <span
+          className={`label self-start rounded-full border px-3 py-1.5 backdrop-blur-md ${pillClass}`}
+          style={{
+            boxShadow:
+              "inset 0 1px 0 rgba(255,255,255,0.35), inset 0 -1px 1px rgba(0,0,0,0.15), 0 2px 10px rgba(0,0,0,0.25)",
+          }}
+        >
+          {p.category}
+        </span>
         <div>
           <span className="block font-display text-2xl text-cotton md:text-3xl">
             {p.title}

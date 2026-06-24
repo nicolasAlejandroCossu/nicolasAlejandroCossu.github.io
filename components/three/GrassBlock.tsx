@@ -29,7 +29,7 @@ export default function GrassBlock() {
     } catch {
       return;
     }
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     const canvas = renderer.domElement;
     canvas.style.width = "100%";
     canvas.style.height = "100%";
@@ -140,31 +140,60 @@ export default function GrassBlock() {
 
     const clock = new THREE.Clock();
     let raf = 0;
-    let running = !reduce;
-    const draw = () => {
+    let last = -1;
+    const FRAME_MS = 1000 / 30; // a slow bob — 30fps is imperceptible from 60
+
+    // Gate the loop on tab visibility AND on-screen presence (and never animate
+    // under reduced motion). Off-screen, the second WebGL context goes idle.
+    let tabVisible = !document.hidden;
+    let onScreen = true;
+    const shouldRun = () => !reduce && tabVisible && onScreen;
+
+    const frame = (now: number) => {
+      if (!shouldRun()) {
+        raf = 0;
+        return;
+      }
+      raf = requestAnimationFrame(frame);
+      if (last >= 0 && now - last < FRAME_MS) return; // throttle to ~30fps
+      last = now;
       const t = clock.getElapsedTime();
       group.position.y = Math.sin(t * 0.9) * 0.07;
       group.rotation.y = Math.sin(t * 0.45) * 0.12;
       group.rotation.x = 0.02 + Math.sin(t * 0.6) * 0.04;
       renderFrame();
     };
-    const loop = () => {
-      if (!running) return;
-      draw();
-      raf = requestAnimationFrame(loop);
+
+    const start = () => {
+      if (raf || !shouldRun()) return; // guard against stacking loops
+      last = -1;
+      raf = requestAnimationFrame(frame);
     };
-    if (running) loop();
+    const stop = () => {
+      if (raf) cancelAnimationFrame(raf);
+      raf = 0;
+    };
+    start();
 
     const onVis = () => {
-      running = !document.hidden && !reduce;
-      if (running) loop();
+      tabVisible = !document.hidden;
+      tabVisible ? start() : stop();
     };
     document.addEventListener("visibilitychange", onVis);
 
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        onScreen = entry.isIntersecting;
+        onScreen ? start() : stop();
+      },
+      { threshold: 0 },
+    );
+    io.observe(el);
+
     return () => {
       disposed = true;
-      running = false;
-      cancelAnimationFrame(raf);
+      stop();
+      io.disconnect();
       ro.disconnect();
       canvas.removeEventListener("webglcontextlost", onLost);
       document.removeEventListener("visibilitychange", onVis);

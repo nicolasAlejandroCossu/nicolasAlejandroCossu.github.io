@@ -50,6 +50,12 @@ export interface Project {
   highlights?: string[];
   url?: string;
   image?: string;
+  /**
+   * Brightness of the image's top-left area (where the category pill sits), so
+   * the pill text flips for contrast. "light" → black text, "dark"/undefined →
+   * white text. Set this whenever you add or replace an image.
+   */
+  imageTone?: "light" | "dark";
   accent: Accent;
   featured: boolean;
 }

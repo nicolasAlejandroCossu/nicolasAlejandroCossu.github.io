@@ -206,6 +206,14 @@ export default function Certifications() {
 
     const norm = (deg: number) => (((deg % 360) + 540) % 360) - 180; // [-180,180)
 
+    // Per-card cache of the last value written for the *expensive* props, so we
+    // skip redundant style mutations. drop-shadow especially is a per-card GPU
+    // filter pass; writing it every frame for ~20 cards was the carousel's main
+    // source of jank (catastrophic under software rendering).
+    const lastFilter: string[] = [];
+    const lastZi: number[] = [];
+    const lastPe: string[] = [];
+
     const render = (v: number) => {
       gsap.set(ringEl, { rotationY: v });
       const cards = cardRefs.current;
@@ -219,14 +227,32 @@ export default function Certifications() {
         // wrapping around to the side/back (no more visible rear of the ring).
         const vis = a <= 48 ? 1 : a >= 85 ? 0 : (85 - a) / 37;
         const scale = 0.84 + 0.22 * g;
-        const yoff = (6 + 22 * g).toFixed(1);
-        const blur = (10 + 40 * g).toFixed(1);
-        const alpha = (0.14 + 0.34 * g).toFixed(3);
+        // Compositor-only props — cheap. Update every frame for smoothness.
         el.style.transform = `scale(${scale.toFixed(3)})`;
         el.style.opacity = vis.toFixed(3);
-        el.style.zIndex = String(Math.round(100 - a));
-        el.style.pointerEvents = vis < 0.5 ? "none" : "auto";
-        el.style.filter = `drop-shadow(0 ${yoff}px ${blur}px rgba(0,0,0,${alpha}))`;
+        // z-index / pointer-events trigger style recalc — only write on change.
+        const zi = Math.round(100 - a);
+        if (zi !== lastZi[i]) {
+          el.style.zIndex = String(zi);
+          lastZi[i] = zi;
+        }
+        const pe = vis < 0.5 ? "none" : "auto";
+        if (pe !== lastPe[i]) {
+          el.style.pointerEvents = pe;
+          lastPe[i] = pe;
+        }
+        // Quantize front-ness so the drop-shadow string changes only a handful
+        // of times per rotation, not 60×/s. The smooth scale carries the depth;
+        // the stepped shadow is imperceptible.
+        const gq = Math.round(g * 10) / 10;
+        const yoff = (6 + 22 * gq).toFixed(1);
+        const blur = (10 + 40 * gq).toFixed(1);
+        const alpha = (0.14 + 0.34 * gq).toFixed(3);
+        const filter = `drop-shadow(0 ${yoff}px ${blur}px rgba(0,0,0,${alpha}))`;
+        if (filter !== lastFilter[i]) {
+          el.style.filter = filter;
+          lastFilter[i] = filter;
+        }
       }
       const front = ((((Math.round(-v / stepAngle) % ringLen) + ringLen) % ringLen)) % len;
       if (front !== lastFront) {
@@ -531,7 +557,7 @@ export default function Certifications() {
                   rel="noreferrer"
                   className="label inline-flex shrink-0 items-center gap-2 rounded-full bg-cherry px-5 py-2.5 text-cotton transition-colors hover:bg-maroon"
                 >
-                  View original ↗
+                  View credential ↗
                 </a>
               )}
             </div>
