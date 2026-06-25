@@ -1,0 +1,144 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+#
+# Nicolas Cossu CV (Harvard-style, RenderCV `classic` theme).
+# Source of truth: portfolio content under /content + the November 2025 CV,
+# reconciled to the current profile (Semi-Senior at Luno, Exos founder).
+#
+# Render with:  py -m rendercv render cv/Nicolas_Cossu_CV.yaml
+cv:
+  name: Nicolas Alejandro Cossu
+  headline: Data Engineer & Forward Deployed Engineer
+  location: Buenos Aires, Argentina
+  email: nicolas.cossu2006@gmail.com
+  website: https://nicolasalejandrocossu.github.io
+  social_networks:
+    - network: LinkedIn
+      username: nicolas-cossu
+    - network: GitHub
+      username: nicolasAlejandroCossu
+  sections:
+    summary:
+      - Self-taught Data Engineer who builds, owns and ships production data systems end to end, from
+        ETL pipelines and cloud architecture to the product on top. I turn ambiguous problems into
+        systems people trust at scale, and I lead delivery from the first scoping call to production.
+        Strong foundation in data science and analytics, with AI as a force multiplier across the stack.
+    experience:
+      - company: Luno
+        position: Semi-Senior Data Engineer
+        location: New York, US (Remote)
+        start_date: 2025-04
+        end_date: present
+        highlights:
+          - Migrated **70,000+ users** from an undocumented legacy database to a modern system in
+            production with **zero disruption**, via custom parsing scripts, fallbacks and automatic
+            backups in a single 10+ hour run.
+          - Engineered backend platforms architected to hold **100,000+ active users**, owning
+            high-volume, high-concurrency APIs and production ETL pipelines.
+          - Wrote the winning technical proposal **for a key client**, then designed its cloud
+            infrastructure from scratch.
+          - Built and maintained REST APIs (FastAPI), relational schemas and full backends on
+            Snowflake, Airflow and AWS, with CI/CD, automated backups and migrations.
+          - Promoted to Semi-Senior and made permanent; now guide projects and mentor a junior
+            teammate within a 20-person multidisciplinary team working under Scrum.
+      - company: Exos
+        position: Co-Founder & Engineer
+        location: Buenos Aires, Argentina
+        start_date: 2026-05
+        end_date: present
+        highlights:
+          - Co-founded a software studio delivering validated multi-tenant systems and bespoke
+            platforms for Argentine SMBs, owning the full arc from scoping to production.
+          - "Owned **CongressIA** end to end, a national-scale platform for medical congresses (three
+            connected systems for industries, physicians and organisers): negotiation, roadmap,
+            estimation, architecture, backend, infrastructure and full frontend. Two people, three months."
+          - Won the CongressIA proposal, then architected its cloud infrastructure from zero
+            (Next.js, FastAPI, PostgreSQL, AWS).
+          - Building **CapyThemAll**, an ecommerce product with a companion mobile pet game,
+            running on the studio's multi-tenant ecosystem.
+    education:
+      - institution: San Vicente Technical High School
+        area: Electronics
+        degree: Technician
+        location: Buenos Aires, Argentina
+        start_date: 2019-03
+        end_date: 2025-12
+        highlights:
+          - "**Top-performing student of the entire institution**, flag-bearer, GPA 9.45/10"
+          - "Led the data infrastructure (MQTT, REST APIs, documented PostgreSQL schema) for the
+            Siemens LOGO! national contest team."
+    skills:
+      - label: Programming
+        details: Python, SQL, Bash
+      - label: Data & Infrastructure
+        details: Snowflake, Apache Airflow, FastAPI, PostgreSQL, Redis, ETL/ELT, Data Warehousing,
+          Database Design, REST APIs, CI/CD
+      - label: Cloud
+        details: AWS, Google Cloud Platform, Microsoft Azure, Docker, Multi-tenant Architecture
+      - label: Data Science & Analytics
+        details: Pandas, NumPy, Matplotlib, Seaborn, scikit-learn, XGBoost, PySpark, dbt, Tableau, Power BI
+      - label: AI & Automation
+        details: AI Agents, AI Workflows, n8n, Make
+      - label: Frontend (AI-augmented)
+        details: With AI as a force multiplier I ship UX/UI and frontends (Next.js, React, React Native)
+          at a high standard, and can take on frontend-related tasks when a project needs them.
+      - label: Ways of working
+        details: Technical Leadership, Project Management, System Architecture, Scrum, Notion, Swagger
+      - label: Languages
+        details: Spanish (native), English (fluent, EF SET C1)
+    certificates_and_awards:
+      - bullet: "**Harvard CS50:** Introduction to Programming with Python (2024); Introduction to
+          Databases with SQL (2025)"
+      - bullet: "**IBM Data Science:** Introduction to Data Science, Data Science Methodology, Data
+          Science Tools (2024)"
+      - bullet: "**EF SET English Certificate:** C1 Advanced (2025)"
+      - bullet: "**Siemens LOGO! National Contest:** Recognition, as Project Manager & Data Engineer (2025)"
+      - bullet: "**Pedro B. Palacios National Award:** La Plata Deliberative Council (2025)"
+design:
+  theme: classic
+  page:
+    size: us-letter
+    top_margin: 0.45in
+    bottom_margin: 0.45in
+    left_margin: 0.55in
+    right_margin: 0.55in
+    show_footer: false
+  colors:
+    name: rgb(20, 20, 20)
+    headline: rgb(60, 60, 60)
+    connections: rgb(60, 60, 60)
+    section_titles: rgb(20, 20, 20)
+    links: rgb(40, 40, 40)
+  typography:
+    line_spacing: 0.55em
+    font_family:
+      body: Source Sans 3
+      name: Source Sans 3
+      section_titles: Source Sans 3
+    font_size:
+      body: 9.5pt
+      name: 25pt
+      section_titles: 1.25em
+  links:
+    underline: true
+    show_external_link_icon: false
+  header:
+    space_below_name: 0.35cm
+    space_below_headline: 0.35cm
+    space_below_connections: 0.35cm
+  section_titles:
+    type: with_full_line
+    space_above: 0.4cm
+    space_below: 0.25cm
+  sections:
+    space_between_regular_entries: 0.7em
+    space_between_text_based_entries: 0.2em
+    show_time_spans_in: []
+  entries:
+    date_and_location_width: 3.6cm
+    degree_width: 2.5cm
+locale:
+  language: english
+settings:
+  current_date: "2026-06-24"
+  bold_keywords: []
+  pdf_title: Nicolas Cossu - CV
