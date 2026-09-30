@@ -1,6 +1,6 @@
 # Nicolas Cossu
 
-> Nicolas Cossu is a Data Engineer (at Luno) and Forward Deployed Engineer based in Buenos Aires, Argentina. He builds, owns and ships production data systems end to end — ETL pipelines, cloud architecture and the product on top — and leads delivery as a team leader and project manager. Background in data science and data analytics.
+> Nicolas Cossu is a Data Engineer (at Luno) and Forward Deployed Engineer based in Buenos Aires, Argentina. He builds, owns and ships production data systems end to end — ETL pipelines, high-availability cloud architecture on AWS and GCP, and the product on top — and leads delivery as a team leader and project manager. Background in data science and data analytics.
 
 Canonical site: https://nicolasalejandrocossu.github.io
 
@@ -18,7 +18,7 @@ Canonical site: https://nicolasalejandrocossu.github.io
 - Name: Nicolas Cossu (Nicolas Alejandro Cossu)
 - Location: Buenos Aires, Argentina
 - Current role: Semi-Senior Data Engineer at Luno (since April 2025)
-- Founder & engineer at Exos, a software studio for Argentine SMBs
+- Co-Founder & Engineer at Exos, a software studio for Argentine SMBs
 - Languages: Spanish (native), English (EF SET certified)
 - Open to: Forward Deployed Engineer, Data Engineer, Project Manager and Team Lead roles
 
@@ -26,17 +26,20 @@ Canonical site: https://nicolasalejandrocossu.github.io
 
 - Data engineering: ETL/ELT pipelines, data warehousing, high-volume and high-concurrency systems
 - Stack: Python, SQL, Snowflake, Apache Airflow, FastAPI, PostgreSQL, Redis
-- Cloud: AWS, Google Cloud Platform, Microsoft Azure; CI/CD, REST APIs, multi-tenant architecture
-- Adjacent: data science, data analytics, Pandas, NumPy, Tableau, AI agents and AI workflows, IoT
+- Cloud: AWS (EC2, ECS Fargate, Lambda, EventBridge, S3, RDS, ElastiCache, CloudFront, WAF, Cognito, SNS, SES, Route 53, CloudWatch, Secrets Manager, Textract, Bedrock), Google Cloud Platform (Cloud Run, Cloud SQL, Secret Manager), Microsoft Azure; Terraform, Docker, GitHub Actions CI/CD
+- Architecture: high availability, disaster recovery, cloud security, cost modeling, multi-tenant architecture, REST APIs
+- Adjacent: data science, data analytics, Pandas, NumPy, Tableau, AI agents and AI workflows, LLM integration, OCR pipelines, RPA (Playwright), React and TypeScript frontends, IoT
 - Leadership: technical leadership, project management, end-to-end software delivery
 
 ## Proof points
 
+- Architected and built the AWS infrastructure to migrate a 100,000+ user platform under a strict SLA: high availability, live events at 10,000 concurrent users, hardened security and a full cost model
+- Shipped two production platforms in parallel as the sole engineer: a multi-country analytics platform on GCP with user-defined metrics, and an RPA operations console
 - Migrated 70,000+ users from a legacy system to a modern one in production with zero disruption (single 10+ hour run)
-- Engineered platforms built to hold 100,000+ active users
+- Built the AI layer of a serverless OCR document pipeline on AWS, with an LLM fallback on Amazon Bedrock
 - Wrote and won a technical proposal for a key client, then designed its cloud infrastructure from scratch
 - Owned CongressIA, a national-scale medical-congress platform, end to end (leadership, architecture, backend, infrastructure)
-- Co-founded Exos and ships validated multi-tenant systems and bespoke platforms
+- Co-founded Exos, with 6+ projects delivered to SMBs and running in production, shipping validated multi-tenant systems and bespoke platforms
 
 ## Education & credentials
 

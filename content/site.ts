@@ -27,7 +27,7 @@ export const site = {
 
   agency: {
     name: "Exos",
-    role: "Founder",
+    role: "Co-Founder",
     url: "https://exos-landing.vercel.app",
   },
 

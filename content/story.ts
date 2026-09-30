@@ -128,6 +128,7 @@ export const story: StoryChapter[] = [
     headline: "I'm not just a data engineer anymore.",
     paragraphs: [
       "These days I can take something from a first conversation to a system in production: understand what a client actually needs, turn it into a plan, and deliver it, alone or guiding a small team to a standard I am proud of.",
+      "At Luno that has meant taking two platforms to production at the same time, on my own, from the database to the interface to the cloud they run on. And architecting the AWS infrastructure for a platform of more than 100,000 users, built to stay up through live events and to hold up under real security demands.",
       "I'm still building. Exos and its multi-tenant systems for small companies. CapyThemAll, my own ecommerce inside that ecosystem. And I'm deliberately growing the parts that aren't code: leadership, project management, the way I communicate. I have a lot left to learn, and that is the best part.",
     ],
     quote: "Same instinct as the maps I made at eight. Much bigger stakes.",

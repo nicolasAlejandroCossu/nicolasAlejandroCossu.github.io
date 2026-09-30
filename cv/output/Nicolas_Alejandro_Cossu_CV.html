@@ -48,7 +48,7 @@
         <li>GitHub: <a href="https://github.com/nicolasAlejandroCossu">nicolasAlejandroCossu</a></li>
         </ul>
         <h1>Summary</h1>
-        <p>Self-taught Data Engineer who builds, owns and ships production data systems end to end, from ETL pipelines and cloud architecture to the product on top. I turn ambiguous problems into systems people trust at scale, and I lead delivery from the first scoping call to production. Strong foundation in data science and analytics, with AI as a force multiplier across the stack.</p>
+        <p>Self-taught Data &amp; Cloud Engineer who builds, owns and ships production systems end to end, from ETL pipelines and high-availability cloud architecture on AWS and GCP to the product on top. I turn ambiguous problems into systems people trust at scale, and I lead delivery from the first scoping call to production, alone or guiding a small team. Strong foundation in data science and analytics, with AI as a force multiplier across the stack.</p>
         <h1>Experience</h1>
         <h2><strong>Luno</strong>, Semi-Senior Data Engineer</h2>
         <p>New York, US (Remote)</p>
@@ -58,16 +58,28 @@
         <p>Migrated <strong>70,000+ users</strong> from an undocumented legacy database to a modern system in production with <strong>zero disruption</strong>, via custom parsing scripts, fallbacks and automatic backups in a single 10+ hour run.</p>
         </li>
         <li>
-        <p>Engineered backend platforms architected to hold <strong>100,000+ active users</strong>, owning high-volume, high-concurrency APIs and production ETL pipelines.</p>
+        <p>Architected and built with Terraform the AWS infrastructure to migrate a <strong>100,000+ user</strong> platform under a strict SLA with <strong>high availability</strong>: ECS Fargate (Graviton), RDS Multi-AZ + RDS Proxy, ElastiCache, CloudFront + WAF and Cognito, sized for <strong>live events with 10,000 concurrent users</strong> through scheduled pre-scaling and a shared WebSocket layer.</p>
+        </li>
+        <li>
+        <p>Hardened it with private-only networking (no public subnets, egress allow-list), GuardDuty, Security Hub, KMS, immutable backups and cross-region DR. Built the cost model with usage scenarios and savings levers of up to <strong>~27%</strong>, and audited the app, surfacing <strong>21 security findings</strong>.</p>
+        </li>
+        <li>
+        <p>Delivered <strong>two production platforms in parallel as the sole engineer</strong> (~7 weeks, ~60k lines, 100+ endpoints). First, a multi-country credit-analytics platform (FastAPI, React, Snowflake) with a user-defined SQL metrics engine, per-country data isolation and RBAC, on <strong>GCP</strong> (Cloud Run, Cloud SQL, Secret Manager) with Terraform and keyless CI/CD.</p>
+        </li>
+        <li>
+        <p>Second, an <strong>RPA</strong> operations console orchestrating a Playwright bot fleet across 5 countries over a WireGuard VPN, with a PostgreSQL job queue, encrypted credentials, an immutable audit log and live compliance dashboards.</p>
+        </li>
+        <li>
+        <p>Built the AI layer of a serverless OCR document pipeline on AWS (S3, Lambda, Textract, SNS), with an <strong>Amazon Bedrock</strong> LLM fallback running in-VPC for layouts the rules can't resolve.</p>
+        </li>
+        <li>
+        <p>Own high-volume, high-concurrency APIs (FastAPI), relational schemas and production ETL pipelines on Snowflake, Airflow and AWS, with CI/CD, automated backups and migrations.</p>
         </li>
         <li>
         <p>Wrote the winning technical proposal <strong>for a key client</strong>, then designed its cloud infrastructure from scratch.</p>
         </li>
         <li>
-        <p>Built and maintained REST APIs (FastAPI), relational schemas and full backends on Snowflake, Airflow and AWS, with CI/CD, automated backups and migrations.</p>
-        </li>
-        <li>
-        <p>Promoted to Semi-Senior and made permanent; now guide projects and mentor a junior teammate within a 20-person multidisciplinary team working under Scrum.</p>
+        <p>Promoted to Semi-Senior and made permanent; now guide projects and mentor a junior teammate in a multidisciplinary company of ~50 people, working under Scrum.</p>
         </li>
         </ul>
         <h2><strong>Exos</strong>, Co-Founder &amp; Engineer</h2>
@@ -75,7 +87,7 @@
         <p>May 2026 – present</p>
         <ul>
         <li>
-        <p>Co-founded a software studio delivering validated multi-tenant systems and bespoke platforms for Argentine SMBs, owning the full arc from scoping to production.</p>
+        <p>Co-founded a software studio delivering validated multi-tenant systems and bespoke platforms for Argentine SMBs, owning the full arc from scoping to production, with <strong>6+ projects</strong> delivered and running in production.</p>
         </li>
         <li>
         <p>Owned <strong>CongressIA</strong> end to end, a national-scale platform for medical congresses (three connected systems for industries, physicians and organisers): negotiation, roadmap, estimation, architecture, backend, infrastructure and full frontend. Two people, three months.</p>
@@ -101,12 +113,13 @@
         </li>
         </ul>
         <h1>Skills</h1>
-        <p><strong>Programming:</strong> Python, SQL, Bash</p>
-        <p><strong>Data &amp; Infrastructure:</strong> Snowflake, Apache Airflow, FastAPI, PostgreSQL, Redis, ETL/ELT, Data Warehousing, Database Design, REST APIs, CI/CD</p>
-        <p><strong>Cloud:</strong> AWS, Google Cloud Platform, Microsoft Azure, Docker, Multi-tenant Architecture</p>
+        <p><strong>Programming:</strong> Python, SQL, TypeScript, Bash</p>
+        <p><strong>Data &amp; Backend:</strong> Snowflake, Apache Airflow, FastAPI, PostgreSQL, SQLAlchemy, Alembic, Redis, ETL/ELT, Data Warehousing, Database Design, REST APIs</p>
+        <p><strong>Cloud &amp; DevOps:</strong> AWS (EC2, ECS Fargate, Lambda, EventBridge, S3, RDS, ElastiCache, CloudFront, WAF, Cognito, SNS, SES, Route 53, CloudWatch, Secrets Manager, Textract, Bedrock), GCP (Cloud Run, Cloud SQL, Secret Manager, Artifact Registry), Microsoft Azure, Terraform, Docker, GitHub Actions, CI/CD</p>
+        <p><strong>Architecture &amp; Security:</strong> High Availability, Disaster Recovery, Multi-tenant Architecture, Cloud Cost Modeling, OAuth/OIDC, JWT, RBAC, Encryption (KMS, AES-256-GCM), WireGuard</p>
         <p><strong>Data Science &amp; Analytics:</strong> Pandas, NumPy, Matplotlib, Seaborn, scikit-learn, XGBoost, PySpark, dbt, Tableau, Power BI</p>
-        <p><strong>AI &amp; Automation:</strong> AI Agents, AI Workflows, n8n, Make</p>
-        <p><strong>Frontend (AI-augmented):</strong> With AI as a force multiplier I ship UX/UI and frontends (Next.js, React, React Native) at a high standard, and can take on frontend-related tasks when a project needs them.</p>
+        <p><strong>AI &amp; Automation:</strong> AI Agents, AI Workflows, LLM integration (Amazon Bedrock, Gemini), OCR, RPA (Playwright), n8n, Make</p>
+        <p><strong>Frontend:</strong> React, Next.js, TypeScript, Tailwind CSS, Recharts, React Native. Production dashboards and admin apps, shipped with AI as a force multiplier.</p>
         <p><strong>Ways of working:</strong> Technical Leadership, Project Management, System Architecture, Scrum, Notion, Swagger</p>
         <p><strong>Languages:</strong> Spanish (native), English (fluent, EF SET C1)</p>
         <h1>Certificates and Awards</h1>

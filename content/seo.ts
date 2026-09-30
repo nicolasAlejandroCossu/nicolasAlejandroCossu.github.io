@@ -52,6 +52,17 @@ export const knowsAbout = [
   "CI/CD",
   "Multi-tenant Architecture",
   "Data Warehousing",
+  // Cloud & infrastructure.
+  "Terraform",
+  "Infrastructure as Code",
+  "Amazon ECS",
+  "AWS Lambda",
+  "Google Cloud Run",
+  "High Availability",
+  "Disaster Recovery",
+  "Cloud Security",
+  "Cloud Cost Optimization",
+  "Docker",
   // Adjacent strengths.
   "Data Science",
   "Data Analytics",
@@ -60,6 +71,13 @@ export const knowsAbout = [
   "Tableau",
   "AI Agents",
   "AI Workflows",
+  "LLM Integration",
+  "Amazon Bedrock",
+  "OCR",
+  "Robotic Process Automation",
+  "Playwright",
+  "React",
+  "TypeScript",
   "IoT",
   // Leadership / delivery.
   "Technical Leadership",
@@ -87,6 +105,9 @@ export const keywords = [
   "ETL Pipelines",
   "FastAPI",
   "AWS",
+  "GCP",
+  "Terraform",
+  "AWS Cloud Architecture",
 ] as const;
 
 /** Default page title + description used across the site and OG/Twitter. */
@@ -94,7 +115,7 @@ export const defaultTitle =
   "Nicolas Cossu — Data Engineer & Forward Deployed Engineer";
 
 export const defaultDescription =
-  "Nicolas Cossu is a Data Engineer and Forward Deployed Engineer based in Buenos Aires, Argentina. He builds and owns production data systems on Snowflake, AWS, Python and FastAPI — migrating 70,000+ users with zero downtime and architecting platforms for 100,000+ users — while leading delivery as a team leader and project manager, with a foundation in data science and analytics.";
+  "Nicolas Cossu is a Data Engineer and Forward Deployed Engineer based in Buenos Aires, Argentina. He builds and owns production data and cloud systems on Snowflake, AWS, GCP, Python and FastAPI — migrating 70,000+ users with zero downtime, architecting high-availability AWS infrastructure for 100,000+ users and shipping multi-country platforms as a sole engineer — while leading delivery as a team leader and project manager, with a foundation in data science and analytics.";
 
 /**
  * Organizations referenced by the Person graph. Kept inline (not separate
@@ -124,7 +145,7 @@ export const personSchema = {
   alternateName: ["Nicolas Alejandro Cossu", "Nico Cossu"],
   jobTitle: targetRoles,
   description:
-    "Data Engineer at Luno and Forward Deployed Engineer who builds, owns and ships production data systems end to end — from ETL pipelines and cloud architecture to the product on top — and leads delivery as a team leader and project manager.",
+    "Data Engineer at Luno and Forward Deployed Engineer who builds, owns and ships production data systems end to end — from ETL pipelines and high-availability cloud architecture on AWS and GCP to the product on top — and leads delivery as a team leader and project manager.",
   url: SITE_URL,
   image: `${SITE_URL}${site.photo}`,
   email: `mailto:${site.email}`,

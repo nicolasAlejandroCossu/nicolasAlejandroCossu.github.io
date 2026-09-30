@@ -36,7 +36,7 @@ export const projects: Project[] = [
     title: "Exos",
     category: "Software Agency",
     year: "2026",
-    role: "Co-founder & engineer",
+    role: "Co-Founder & Engineer",
     status: "Live",
     summary:
       "The software agency I co-founded — validated multi-tenant systems for Argentine SMBs, and bespoke platforms built to order.",

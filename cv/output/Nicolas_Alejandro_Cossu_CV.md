@@ -8,7 +8,7 @@
 
 
 # Summary
-Self-taught Data Engineer who builds, owns and ships production data systems end to end, from ETL pipelines and cloud architecture to the product on top. I turn ambiguous problems into systems people trust at scale, and I lead delivery from the first scoping call to production. Strong foundation in data science and analytics, with AI as a force multiplier across the stack.
+Self-taught Data & Cloud Engineer who builds, owns and ships production systems end to end, from ETL pipelines and high-availability cloud architecture on AWS and GCP to the product on top. I turn ambiguous problems into systems people trust at scale, and I lead delivery from the first scoping call to production, alone or guiding a small team. Strong foundation in data science and analytics, with AI as a force multiplier across the stack.
 
 # Experience
 ## **Luno**, Semi-Senior Data Engineer
@@ -19,13 +19,21 @@ Apr 2025 – present
 
 - Migrated **70,000+ users** from an undocumented legacy database to a modern system in production with **zero disruption**, via custom parsing scripts, fallbacks and automatic backups in a single 10+ hour run.
 
-- Engineered backend platforms architected to hold **100,000+ active users**, owning high-volume, high-concurrency APIs and production ETL pipelines.
+- Architected and built with Terraform the AWS infrastructure to migrate a **100,000+ user** platform under a strict SLA with **high availability**: ECS Fargate (Graviton), RDS Multi-AZ + RDS Proxy, ElastiCache, CloudFront + WAF and Cognito, sized for **live events with 10,000 concurrent users** through scheduled pre-scaling and a shared WebSocket layer.
+
+- Hardened it with private-only networking (no public subnets, egress allow-list), GuardDuty, Security Hub, KMS, immutable backups and cross-region DR. Built the cost model with usage scenarios and savings levers of up to **~27%**, and audited the app, surfacing **21 security findings**.
+
+- Delivered **two production platforms in parallel as the sole engineer** (~7 weeks, ~60k lines, 100+ endpoints). First, a multi-country credit-analytics platform (FastAPI, React, Snowflake) with a user-defined SQL metrics engine, per-country data isolation and RBAC, on **GCP** (Cloud Run, Cloud SQL, Secret Manager) with Terraform and keyless CI/CD.
+
+- Second, an **RPA** operations console orchestrating a Playwright bot fleet across 5 countries over a WireGuard VPN, with a PostgreSQL job queue, encrypted credentials, an immutable audit log and live compliance dashboards.
+
+- Built the AI layer of a serverless OCR document pipeline on AWS (S3, Lambda, Textract, SNS), with an **Amazon Bedrock** LLM fallback running in-VPC for layouts the rules can't resolve.
+
+- Own high-volume, high-concurrency APIs (FastAPI), relational schemas and production ETL pipelines on Snowflake, Airflow and AWS, with CI/CD, automated backups and migrations.
 
 - Wrote the winning technical proposal **for a key client**, then designed its cloud infrastructure from scratch.
 
-- Built and maintained REST APIs (FastAPI), relational schemas and full backends on Snowflake, Airflow and AWS, with CI/CD, automated backups and migrations.
-
-- Promoted to Semi-Senior and made permanent; now guide projects and mentor a junior teammate within a 20-person multidisciplinary team working under Scrum.
+- Promoted to Semi-Senior and made permanent; now guide projects and mentor a junior teammate in a multidisciplinary company of ~50 people, working under Scrum.
 
 
 
@@ -35,7 +43,7 @@ Buenos Aires, Argentina
 
 May 2026 – present
 
-- Co-founded a software studio delivering validated multi-tenant systems and bespoke platforms for Argentine SMBs, owning the full arc from scoping to production.
+- Co-founded a software studio delivering validated multi-tenant systems and bespoke platforms for Argentine SMBs, owning the full arc from scoping to production, with **6+ projects** delivered and running in production.
 
 - Owned **CongressIA** end to end, a national-scale platform for medical congresses (three connected systems for industries, physicians and organisers): negotiation, roadmap, estimation, architecture, backend, infrastructure and full frontend. Two people, three months.
 
@@ -63,17 +71,19 @@ Mar 2019 – Dec 2025
 
 
 # Skills
-**Programming:** Python, SQL, Bash
+**Programming:** Python, SQL, TypeScript, Bash
 
-**Data & Infrastructure:** Snowflake, Apache Airflow, FastAPI, PostgreSQL, Redis, ETL/ELT, Data Warehousing, Database Design, REST APIs, CI/CD
+**Data & Backend:** Snowflake, Apache Airflow, FastAPI, PostgreSQL, SQLAlchemy, Alembic, Redis, ETL/ELT, Data Warehousing, Database Design, REST APIs
 
-**Cloud:** AWS, Google Cloud Platform, Microsoft Azure, Docker, Multi-tenant Architecture
+**Cloud & DevOps:** AWS (EC2, ECS Fargate, Lambda, EventBridge, S3, RDS, ElastiCache, CloudFront, WAF, Cognito, SNS, SES, Route 53, CloudWatch, Secrets Manager, Textract, Bedrock), GCP (Cloud Run, Cloud SQL, Secret Manager, Artifact Registry), Microsoft Azure, Terraform, Docker, GitHub Actions, CI/CD
+
+**Architecture & Security:** High Availability, Disaster Recovery, Multi-tenant Architecture, Cloud Cost Modeling, OAuth/OIDC, JWT, RBAC, Encryption (KMS, AES-256-GCM), WireGuard
 
 **Data Science & Analytics:** Pandas, NumPy, Matplotlib, Seaborn, scikit-learn, XGBoost, PySpark, dbt, Tableau, Power BI
 
-**AI & Automation:** AI Agents, AI Workflows, n8n, Make
+**AI & Automation:** AI Agents, AI Workflows, LLM integration (Amazon Bedrock, Gemini), OCR, RPA (Playwright), n8n, Make
 
-**Frontend (AI-augmented):** With AI as a force multiplier I ship UX/UI and frontends (Next.js, React, React Native) at a high standard, and can take on frontend-related tasks when a project needs them.
+**Frontend:** React, Next.js, TypeScript, Tailwind CSS, Recharts, React Native. Production dashboards and admin apps, shipped with AI as a force multiplier.
 
 **Ways of working:** Technical Leadership, Project Management, System Architecture, Scrum, Notion, Swagger
 
