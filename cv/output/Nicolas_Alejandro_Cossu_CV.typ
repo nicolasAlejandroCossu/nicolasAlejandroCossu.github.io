@@ -142,9 +142,9 @@ Self-taught Data & Cloud Engineer who builds, owns and ships production systems 
 
     - Co-founded a software studio delivering validated multi-tenant systems and bespoke platforms for Argentine SMBs, owning the full arc from scoping to production, with #strong[6+ projects] delivered and running in production.
 
-    - Owned #strong[CongressIA] end to end, a national-scale platform for medical congresses (three connected systems for industries, physicians and organisers): negotiation, roadmap, estimation, architecture, backend, infrastructure and full frontend. Two people, three months.
+    - Owned #strong[Cortex Events] end to end, a national-scale platform for medical congresses (three connected systems for industries, physicians and organisers): negotiation, roadmap, estimation, architecture, backend, infrastructure and full frontend. Two people, three months.
 
-    - Won the CongressIA proposal, then architected its cloud infrastructure from zero (Next.js, FastAPI, PostgreSQL, AWS).
+    - Won the Cortex Events proposal, then architected its cloud infrastructure from zero (Next.js, FastAPI, PostgreSQL, AWS).
 
     - Building #strong[CapyThemAll], an ecommerce product with a companion mobile pet game, running on the studio's multi-tenant ecosystem.
 

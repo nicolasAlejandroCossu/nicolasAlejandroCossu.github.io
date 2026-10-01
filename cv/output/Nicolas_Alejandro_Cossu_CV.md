@@ -45,9 +45,9 @@ May 2026 – present
 
 - Co-founded a software studio delivering validated multi-tenant systems and bespoke platforms for Argentine SMBs, owning the full arc from scoping to production, with **6+ projects** delivered and running in production.
 
-- Owned **CongressIA** end to end, a national-scale platform for medical congresses (three connected systems for industries, physicians and organisers): negotiation, roadmap, estimation, architecture, backend, infrastructure and full frontend. Two people, three months.
+- Owned **Cortex Events** end to end, a national-scale platform for medical congresses (three connected systems for industries, physicians and organisers): negotiation, roadmap, estimation, architecture, backend, infrastructure and full frontend. Two people, three months.
 
-- Won the CongressIA proposal, then architected its cloud infrastructure from zero (Next.js, FastAPI, PostgreSQL, AWS).
+- Won the Cortex Events proposal, then architected its cloud infrastructure from zero (Next.js, FastAPI, PostgreSQL, AWS).
 
 - Building **CapyThemAll**, an ecommerce product with a companion mobile pet game, running on the studio's multi-tenant ecosystem.
 

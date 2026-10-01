@@ -111,7 +111,7 @@ export const story: StoryChapter[] = [
     headline: "I stopped just writing code.",
     paragraphs: [
       "In 2026 I got Dylan an interview at Luno. He got in, and we started working side by side, splitting the load the way good teams do. My own scope kept growing too: planning whole infrastructures, writing proposals for new clients, sitting in weekly calls. I had become a Semi-Senior, guiding projects instead of just closing tickets.",
-      "On the side, Dylan and I founded Exos, a small studio building software for Argentine SMBs. Our first big build was CongressIA: a full platform for medical congresses, three connected systems and a landing for three completely different audiences. Two people, three months.",
+      "On the side, Dylan and I founded Exos, a small studio building software for Argentine SMBs. Our first big build was Cortex Events: a full platform for medical congresses, three connected systems and a landing for three completely different audiences. Two people, three months.",
       "It also forced me to face something. I always told myself I wasn't creative, that I couldn't do design or frontend. It turned out that was just fear. I built the entire frontend myself: brand identity, a distinct voice and value for doctors, organizers and industries, responsive and intuitive on every device. With fundamentals, a clear structure and AI as a multiplier, two of us shipped something I would have sworn needed a whole studio.",
     ],
     quote: "I thought I wasn't creative. It was just fear.",

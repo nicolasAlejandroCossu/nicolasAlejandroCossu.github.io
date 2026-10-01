@@ -39,8 +39,8 @@ export const experience: ExperienceTrack[] = [
     summary: "Leading delivery for real clients, start to finish.",
     bullets: [
       "Co-founded Exos, a software studio, and lead delivery from first call to production.",
-      "Owned CongressIA end to end: negotiation, roadmap, estimation, AI assisted UX, architecture and development.",
-      "Wrote and won the proposal for CongressIA, then designed its cloud architecture from scratch.",
+      "Owned Cortex Events end to end: negotiation, roadmap, estimation, AI assisted UX, architecture and development.",
+      "Wrote and won the proposal for Cortex Events, then designed its cloud architecture from scratch.",
       "Built and launched my own ecommerce product, CapyThemAll.",
       "Delivered 6+ projects for Argentine SMBs, from multi-tenant systems to custom platforms, all running in production.",
     ],

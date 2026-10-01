@@ -8,8 +8,8 @@ import type { Project } from "./types";
  */
 export const projects: Project[] = [
   {
-    slug: "congressia",
-    title: "CongressIA",
+    slug: "cortex-events",
+    title: "Cortex Events",
     category: "Platform",
     year: "2026",
     role: "Project lead — strategy, architecture & delivery",
@@ -26,7 +26,7 @@ export const projects: Project[] = [
       "Architecture & infrastructure from zero",
       "Built for national scale",
     ],
-    image: "/work/congressia.webp",
+    image: "/work/cortexevents.webp",
     imageTone: "dark",
     accent: "cherry",
     featured: true,
@@ -45,7 +45,7 @@ export const projects: Project[] = [
       "Just the two of us, which means we wear every hat and answer for every decision. The pitch is simple: a genuinely high engineering bar, without the agency overhead.",
     ],
     stack: ["Multi-tenant", "AWS", "PostgreSQL", "Redis", "FastAPI", "Next.js"],
-    url: "https://exos-landing.vercel.app",
+    url: "https://exoscode.com",
     image: "/work/exos.webp",
     imageTone: "dark",
     accent: "noir",

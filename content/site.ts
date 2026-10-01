@@ -22,13 +22,13 @@ export const site = {
     email: "mailto:nicolas.cossu2006@gmail.com",
     linkedin: "https://www.linkedin.com/in/nicolas-cossu",
     github: "https://github.com/nicolasAlejandroCossu",
-    agency: "https://exos-landing.vercel.app",
+    agency: "https://exoscode.com",
   },
 
   agency: {
     name: "Exos",
     role: "Co-Founder",
-    url: "https://exos-landing.vercel.app",
+    url: "https://exoscode.com",
   },
 
   // Drop the PDF in /public with this exact name to enable the download.

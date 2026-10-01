@@ -38,7 +38,7 @@ Canonical site: https://nicolasalejandrocossu.github.io
 - Migrated 70,000+ users from a legacy system to a modern one in production with zero disruption (single 10+ hour run)
 - Built the AI layer of a serverless OCR document pipeline on AWS, with an LLM fallback on Amazon Bedrock
 - Wrote and won a technical proposal for a key client, then designed its cloud infrastructure from scratch
-- Owned CongressIA, a national-scale medical-congress platform, end to end (leadership, architecture, backend, infrastructure)
+- Owned Cortex Events, a national-scale medical-congress platform, end to end (leadership, architecture, backend, infrastructure)
 - Co-founded Exos, with 6+ projects delivered to SMBs and running in production, shipping validated multi-tenant systems and bespoke platforms
 
 ## Education & credentials
